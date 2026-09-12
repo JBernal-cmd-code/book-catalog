@@ -1,0 +1,15 @@
+<h1>Publishers</h1>
+<ul>
+    {% for publisher in object_list %}
+        <li>
+            {{ publisher.name }}
+            <ul>
+                {% for book in publisher.book_set.all %}
+                    <li>{{ book.title }}</li>
+                    {% empty %}
+                        <li>No books available</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
