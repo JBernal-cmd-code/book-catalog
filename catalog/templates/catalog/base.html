@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Catalog</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'book_list' %}">Book List</a></li>
+            <li><a href="{% url 'publisher_list' %}">Publishers</a></li>
+            <li><a href="{% url 'review_list' %}">Reviews</a></li>
+        </ul>
+    </nav>
+    <hr>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
